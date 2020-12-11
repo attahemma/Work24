@@ -1,6 +1,7 @@
 package com.pyropy.work24.views.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,7 @@ import com.google.firebase.database.Query;
 import com.pyropy.work24.R;
 import com.pyropy.work24.database.FirebaseUtil;
 import com.pyropy.work24.database.GigHelper;
+import com.pyropy.work24.views.activities.ViewGig;
 
 import java.util.ArrayList;
 
@@ -91,7 +93,7 @@ public class MyGigsAdapter extends RecyclerView.Adapter<MyGigsAdapter.MyGigViewH
         return mygigs.size();
     }
 
-    public static class MyGigViewHolder extends RecyclerView.ViewHolder{
+    public class MyGigViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         ImageView gigImg;
         TextView gigTitle,price;
@@ -102,6 +104,8 @@ public class MyGigsAdapter extends RecyclerView.Adapter<MyGigsAdapter.MyGigViewH
             gigImg = (ImageView) itemView.findViewById(R.id.ivThumb);
             gigTitle = (TextView) itemView.findViewById(R.id.txt_title);
             price =  (TextView) itemView.findViewById(R.id.price);
+
+            itemView.setOnClickListener(this);
         }
 
         public void bind(GigHelper helper, Context context){
@@ -122,6 +126,16 @@ public class MyGigsAdapter extends RecyclerView.Adapter<MyGigsAdapter.MyGigViewH
 
         public void showImage(String url, Context context){
             Glide.with(context).load(url).into(gigImg);
+        }
+
+        @Override
+        public void onClick(View view) {
+            int position = getAdapterPosition();
+            Log.d("ITEM CLICKED", String.valueOf(position));
+            GigHelper selectedGig = mygigs.get(position);
+            Intent intent = new Intent(view.getContext(), ViewGig.class);
+            intent.putExtra("Gig",selectedGig);
+            view.getContext().startActivity(intent);
         }
     }
 }

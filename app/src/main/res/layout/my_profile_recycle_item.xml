@@ -7,8 +7,9 @@
     android:orientation="horizontal"
     app:cardCornerRadius="5dp"
     app:cardUseCompatPadding="true"
-    app:cardElevation="8dp"
+    app:cardElevation="4dp"
     android:background="@color/colorWhite"
+    android:padding="8dp"
     >
 
     <LinearLayout
@@ -19,8 +20,8 @@
         >
 
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="100dp"
+            android:layout_height="88dp"
             android:layout_gravity="center_horizontal"
             android:scaleType="fitCenter"
             android:src="@mipmap/ic_launcher"
@@ -43,6 +44,7 @@
             android:padding="2dp"
             android:layout_gravity="center_horizontal"
             android:text="$0.0"
+            android:textColor="@color/colorBlack"
             android:id="@+id/price"/>
 
     </LinearLayout>
