@@ -42,8 +42,8 @@ public class JobsFragment extends Fragment {
     }
 
     private void addFragsToAdapter() {
-        mJobGigAdapter.addFragment(new MyGigsFragment(), "my gigs");
-        mJobGigAdapter.addFragment(new MyJobsFragment(), "my jobs");
+        mJobGigAdapter.addFragment(new MyGigsFragment(), "gigs");
+        mJobGigAdapter.addFragment(new MyJobsFragment(), "jobs");
         mJobGigAdapter.addFragment(new SavedJobsFragment(), "Favorites");
     }
 
