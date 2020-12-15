@@ -37,7 +37,7 @@ public class ProfileFragment extends Fragment {
     private RecyclerView userGigs, userCourses;
     private LinearLayoutManager mRvManager;
     MyGigsAdapter mMyGigsAdapter;
-    MyCoursesAdapter mMyCoursesAdapter;
+    //MyCoursesAdapter mMyCoursesAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
