@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="5dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="#FFFFFF">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/gigCard"
@@ -43,7 +43,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Gig Title"
+                    android:text="Gig Title is supposed to go in here but"
+                    android:textAlignment="textStart"
+                    android:textColor="#FFFFFF"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -52,10 +54,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:text="$0.0"
-                    android:textSize="17sp"
                     android:layout_marginTop="3dp"
-                    />
+                    android:text="$0.0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/tv_gig_desc"
@@ -64,6 +66,7 @@
                     android:layout_gravity="left"
                     android:layout_marginTop="3dp"
                     android:text="in this gig, I will provide you amazing and awesome service"
+                    android:textColor="#FFFFFF"
                     android:textSize="14sp" />
             </LinearLayout>
 
